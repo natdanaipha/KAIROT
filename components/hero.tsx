@@ -25,15 +25,15 @@ export function Hero() {
       {/* Content */}
       <div className="container mx-auto px-6 lg:px-12 relative z-10 flex-1 flex flex-col justify-center pt-20 pb-16">
         <div className="max-w-3xl">
-          <p className="text-sm tracking-[0.2em] uppercase text-muted-foreground mb-6">
+          {/* <p className="text-sm tracking-[0.2em] uppercase text-muted-foreground mb-6">
             {t("hero.subtitle")}
-          </p>
+          </p> */}
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-light text-foreground leading-[1.1] tracking-tight text-balance mb-8">
             {t("hero.title1")}
             <br />
             {t("hero.title2")}
           </h1>
-          <p className="text-muted-foreground text-base lg:text-lg leading-relaxed mb-10 max-w-lg">
+          <p className="text-base lg:text-lg leading-relaxed mb-10 max-w-lg">
             {t("hero.description")}
           </p>
           
