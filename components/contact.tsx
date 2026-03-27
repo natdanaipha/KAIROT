@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { MapPin, Phone, Mail, Clock } from "lucide-react"
+import { MapPin, Phone, MessageCircle } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 
 export function Contact() {
@@ -13,22 +13,26 @@ export function Contact() {
     {
       icon: MapPin,
       title: t("contact.location"),
-      details: ["123 Rama 9 Road", "Huai Khwang, Bangkok 10310"],
+      details: [
+        "บริษัท ออโต้ แกลเลอรี่ ซีคอน จำกัด",
+        "446 ถนนศรีนครินทร์ แขวงหนองบอน เขตประเวศ กรุงเทพมหานคร 10250",
+      ],
+      mapUrl: "https://maps.app.goo.gl/CGuur2pKD8h6onjh7",
     },
     {
       icon: Phone,
       title: t("contact.phone"),
-      details: ["+66 2 123 4567"],
+      details: [
+        "ฝ่ายขาย: 02-743-4600 ต่อ 101-102",
+        "ฝ่ายบริการ: 02-743-4600 ต่อ 603-605",
+        "ฝ่ายอะไหล่: 02-743-4600 ต่อ 501-502",
+        "ฝ่ายซ่อมสีและตัวถัง: 02-743-4600 ต่อ 144-145",
+      ],
     },
     {
-      icon: Mail,
-      title: t("contact.email"),
-      details: ["contact@autohaus.co.th"],
-    },
-    {
-      icon: Clock,
-      title: t("contact.hours"),
-      details: ["Mon - Sat: 9AM - 7PM", "Sun: 10AM - 6PM"],
+      icon: MessageCircle,
+      title: "Social",
+      details: ["Facebook: ฟอร์ดศรีนครินทร์", "Line: @ford.thai"],
     },
   ]
 
@@ -48,7 +52,7 @@ export function Contact() {
               {t("contact.description")}
             </p>
 
-            <div className="grid sm:grid-cols-2 gap-8">
+            <div className="grid gap-8">
               {contactInfo.map((item, index) => (
                 <div key={index} className="flex gap-4">
                   <div className="w-10 h-10 rounded-full bg-background flex items-center justify-center shrink-0">
@@ -63,6 +67,16 @@ export function Contact() {
                         {detail}
                       </p>
                     ))}
+                    {item.mapUrl && (
+                      <a
+                        href={item.mapUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block mt-2 text-sm underline underline-offset-2 text-foreground hover:text-foreground/80"
+                      >
+                        ดูแผนที่
+                      </a>
+                    )}
                   </div>
                 </div>
               ))}

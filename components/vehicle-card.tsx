@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 
@@ -13,6 +14,7 @@ interface VehicleCardProps {
   mileage: string
   fuelType: string
   isNew?: boolean
+  href: string
 }
 
 export function VehicleCard({
@@ -24,11 +26,12 @@ export function VehicleCard({
   mileage,
   fuelType,
   isNew = false,
+  href,
 }: VehicleCardProps) {
   const { t } = useLanguage()
 
   return (
-    <div className="group cursor-pointer">
+    <Link href={href} className="group block cursor-pointer">
       {/* Image Container */}
       <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-muted mb-4">
         <Image
@@ -65,6 +68,6 @@ export function VehicleCard({
         </div>
         <p className="text-lg font-medium text-foreground whitespace-nowrap">{price}</p>
       </div>
-    </div>
+    </Link>
   )
 }

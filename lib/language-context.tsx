@@ -34,9 +34,11 @@ const translations = {
     "vehicles.subtitle": "Collection",
     "vehicles.title": "Featured Vehicles",
     "vehicles.all": "All",
-    "vehicles.sedan": "Sedan",
-    "vehicles.sports": "Sports",
-    "vehicles.electric": "Electric",
+    "vehicles.ford": "Ford",
+    "vehicles.mg": "MG",
+    "vehicles.toyota": "Toyota",
+    "vehicles.honda": "Honda",
+    "vehicles.nissan": "Nissan",
     "vehicles.viewAll": "View All Vehicles",
     "vehicles.new": "New",
     
@@ -121,11 +123,13 @@ const translations = {
     
     // Vehicles
     "vehicles.subtitle": "คอลเลคชัน",
-    "vehicles.title": "รถยนต์แนะนำ",
+    "vehicles.title": "รถยนต์",
     "vehicles.all": "ทั้งหมด",
-    "vehicles.sedan": "ซีดาน",
-    "vehicles.sports": "สปอร์ต",
-    "vehicles.electric": "ไฟฟ้า",
+    "vehicles.ford": "ฟอร์ด",
+    "vehicles.mg": "เอ็มจี",
+    "vehicles.toyota": "โตโยต้า",
+    "vehicles.honda": "ฮอนด้า",
+    "vehicles.nissan": "นิสสัน",
     "vehicles.viewAll": "ดูรถทั้งหมด",
     "vehicles.new": "ใหม่",
     
